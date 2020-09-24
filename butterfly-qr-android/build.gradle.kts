@@ -64,6 +64,8 @@ dependencies {
     implementation("com.google.zxing:core:3.2.1")
     implementation("com.journeyapps:zxing-android-embedded:3.2.0@aar")
     implementation("com.google.android.gms:play-services-vision:20.1.2")
+    api("io.reactivex.rxjava2:rxkotlin:2.4.0")
+    api("io.reactivex.rxjava2:rxandroid:2.1.1")
 }
 
 tasks.create("sourceJar", Jar::class) {

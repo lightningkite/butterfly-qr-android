@@ -1,5 +1,6 @@
 package com.lightningkite.butterfly.qr
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.SurfaceHolder
@@ -24,6 +25,7 @@ class BarcodeScannerView : SurfaceView {
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {}
 }
 
+@SuppressLint("MissingPermission")
 fun BarcodeScannerView.bindBarcodeScan(dependency: ViewDependency): Observable<String> {
     val out = PublishSubject.create<String>()
     dependency.requestPermission(android.Manifest.permission.CAMERA) {
@@ -36,15 +38,15 @@ fun BarcodeScannerView.bindBarcodeScan(dependency: ViewDependency): Observable<S
                 .setAutoFocusEnabled(true)
                 .build()
             this.holder.addCallback(object : SurfaceHolder.Callback {
-                override fun surfaceChanged(holder: SurfaceHolder?, format: Int, width: Int, height: Int) {
+                override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
 
                 }
 
-                override fun surfaceDestroyed(holder: SurfaceHolder?) {
+                override fun surfaceDestroyed(holder: SurfaceHolder) {
                     cameraSource.stop()
                 }
 
-                override fun surfaceCreated(holder: SurfaceHolder?) {
+                override fun surfaceCreated(holder: SurfaceHolder) {
                     try {
                         cameraSource.start(holder)
                     } catch (ie: IOException) {
