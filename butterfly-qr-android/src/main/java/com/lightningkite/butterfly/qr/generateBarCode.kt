@@ -11,8 +11,6 @@ import com.lightningkite.butterfly.asImage
 import io.reactivex.Single
 
 
-//TODO: Allow setup for a type of barcode, for now it's limited to QR,
-//need to find out how this works for ios before deciding.
 fun generateBarCode(text:String, width:Int = 200, height:Int = 200): Single<Image> {
     val formatWriter = MultiFormatWriter()
     return try{
