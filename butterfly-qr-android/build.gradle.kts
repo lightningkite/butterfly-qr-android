@@ -1,6 +1,4 @@
-import com.lightningkite.khrysalis.KhrysalisSettings
-import com.lightningkite.khrysalis.ios.convertResourcesToIos
-import com.lightningkite.khrysalis.ios.layout.convertLayoutsToSwift
+
 
 fun DependencyHandler.elastic(notation: String): Dependency {
     val projectName = notation.substringAfter(':').substringBefore(':')
@@ -18,9 +16,6 @@ buildscript {
         google()
         jcenter()
         mavenLocal()
-    }
-    dependencies {
-        classpath("com.lightningkite.khrysalis:plugin:0.1.0")
     }
 }
 
