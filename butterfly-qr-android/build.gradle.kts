@@ -31,7 +31,7 @@ plugins {
     id("digital.wup.android-maven-publish") version "3.6.2"
 }
 
-group = "com.lightningkite.khrysalis"
+group = "com.lightningkite.butterfly"
 version = "0.1.1"
 
 repositories {
