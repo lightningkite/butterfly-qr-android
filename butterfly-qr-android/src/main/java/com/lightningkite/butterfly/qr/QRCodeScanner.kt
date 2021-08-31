@@ -9,8 +9,7 @@ import com.google.android.gms.vision.CameraSource
 import com.google.android.gms.vision.Detector
 import com.google.android.gms.vision.barcode.Barcode
 import com.google.android.gms.vision.barcode.BarcodeDetector
-import com.lightningkite.butterfly.android.ActivityAccess
-import com.lightningkite.butterfly.delay
+import com.lightningkite.rxkotlinproperty.viewgenerators.ActivityAccess
 import io.reactivex.Observable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
