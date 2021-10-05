@@ -6,8 +6,8 @@ import com.google.zxing.MultiFormatWriter
 import com.google.zxing.WriterException
 import com.google.zxing.common.BitMatrix
 import com.journeyapps.barcodescanner.BarcodeEncoder
-import com.lightningkite.butterfly.Image
-import com.lightningkite.butterfly.asImage
+import com.lightningkite.rxkotlinproperty.android.resources.Image
+import com.lightningkite.rxkotlinproperty.android.resources.asImage
 import io.reactivex.Single
 
 

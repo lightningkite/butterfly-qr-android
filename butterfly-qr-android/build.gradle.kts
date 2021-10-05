@@ -19,7 +19,7 @@ plugins {
 }
 
 group = "com.lightningkite.butterfly"
-version = "0.1.2"
+version = "1.0.0"
 
 val props = project.rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { stream ->
     Properties().apply { load(stream) }
@@ -73,7 +73,8 @@ android {
 }
 
 dependencies {
-    api("com.lightningkite.butterfly:butterfly-android:1.0.0")
+    api("com.lightningkite.rxkotlinproperty:android-resources:0.0.1")
+    api("com.lightningkite.rxkotlinproperty:view-generator:0.0.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
