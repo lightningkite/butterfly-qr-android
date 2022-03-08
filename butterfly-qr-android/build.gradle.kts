@@ -3,7 +3,6 @@ import java.util.Properties
 buildscript {
     repositories {
         google()
-        jcenter()
         mavenLocal()
     }
 }
@@ -51,7 +50,6 @@ val deploymentPassword = (System.getenv("OSSRH_PASSWORD")?.takeUnless { it.isEmp
 val useDeployment = deploymentUser != null || deploymentPassword != null
 
 repositories {
-    jcenter()
     mavenCentral()
     maven("https://jitpack.io")
     google()
@@ -77,8 +75,8 @@ dependencies {
     testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.3.0")
     androidTestImplementation("com.android.support.test.espresso:espresso-core:3.0.2")
-    implementation("com.google.zxing:core:3.2.1")
-    implementation("com.journeyapps:zxing-android-embedded:3.2.0@aar")
+    implementation("com.google.zxing:core:3.4.1")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
     implementation("com.google.android.gms:play-services-vision:20.1.2")
     api("io.reactivex.rxjava2:rxkotlin:2.4.0")
     api("io.reactivex.rxjava2:rxandroid:2.1.1")
